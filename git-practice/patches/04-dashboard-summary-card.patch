@@ -1,0 +1,29 @@
+diff --git a/app/templates/dashboard.html b/app/templates/dashboard.html
+index 0000000..1111111 100644
+--- a/app/templates/dashboard.html
++++ b/app/templates/dashboard.html
+@@ -24,6 +24,10 @@
+       <article class="stat-card"><span class="stat-label">Tasks completed</span><strong>24</strong><span class="stat-note">This month</span></article>
+       <article class="stat-card"><span class="stat-label">Pending reviews</span><strong>03</strong><span class="stat-note">Needs your attention</span></article>
+     </section>
++    <section class="summary-card">
++      <div><p class="eyebrow">WEEKLY PROGRESS</p><h2>You're making progress</h2><p class="muted">You have completed 24 tasks this month.</p></div>
++      <div class="progress-track"><span></span></div>
++    </section>
+     <section class="welcome-panel">
+       <div><p class="eyebrow">GET STARTED</p><h2>Your workspace is ready.</h2><p class="muted">Use this starter app to practice Git, branches, commits and merges.</p></div>
+       <span class="panel-symbol">✦</span>
+diff --git a/app/static/styles.css b/app/static/styles.css
+index 0000000..1111111 100644
+--- a/app/static/styles.css
++++ b/app/static/styles.css
+@@ -35,6 +35,9 @@ button { padding: 13px 16px; border: 0; border-radius: 10px; cursor: pointer; fo
+ .stat-label, .stat-note { display: block; color: #9ca9c3; font-size: 13px; }
+ .stat-card strong { display: block; margin: 14px 0 8px; font: 800 34px Manrope, sans-serif; }
+ .stat-note { font-size: 12px; }
++.summary-card { margin-top: 20px; padding: 24px; border: 1px solid #293650; border-radius: 16px; background: #121d32; }
++.progress-track { height: 8px; margin-top: 18px; overflow: hidden; border-radius: 20px; background: #26334d; }
++.progress-track span { display: block; width: 72%; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #6478ff, #a66bff); }
+ .welcome-panel { display: flex; align-items: center; justify-content: space-between; margin-top: 20px; background: linear-gradient(110deg, #192b4a, #211b3e); }
+ .welcome-panel .eyebrow { margin-top: 0; }
+ .panel-symbol { color: #a99aff; font-size: 44px; }

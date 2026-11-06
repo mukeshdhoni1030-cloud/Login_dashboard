@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Northstar</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/dashboard"><span class="brand-mark small">N</span> Northstar</a>
+    <span class="topbar-label">Workspace</span>
+  </header>
+  <main class="dashboard">
+    <p class="eyebrow">OVERVIEW</p>
+    <h1>Hello, {{ username }}!</h1>
+    <p class="muted">Here is your workspace at a glance.</p>
+    <section class="stats-grid">
+      <article class="stat-card"><span class="stat-label">Active projects</span><strong>08</strong><span class="stat-note">Across your workspace</span></article>
+      <article class="stat-card"><span class="stat-label">Tasks completed</span><strong>24</strong><span class="stat-note">This month</span></article>
+      <article class="stat-card"><span class="stat-label">Pending reviews</span><strong>03</strong><span class="stat-note">Needs your attention</span></article>
+    </section>
+    <section class="welcome-panel">
+      <div><p class="eyebrow">GET STARTED</p><h2>Your workspace is ready.</h2><p class="muted">Use this starter app to practice Git, branches, commits and merges.</p></div>
+      <span class="panel-symbol">✦</span>
+    </section>
+    <form action="/logout" method="post"><button class="secondary-button" type="submit">Log out</button></form>
+  </main>
+</body>
+</html>

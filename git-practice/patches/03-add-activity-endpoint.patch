@@ -1,0 +1,24 @@
+diff --git a/app/main.py b/app/main.py
+index 0000000..1111111 100644
+--- a/app/main.py
++++ b/app/main.py
+@@ -60,6 +60,19 @@ async def dashboard(request: Request):
+     )
+ 
+ 
++@app.get("/api/activity")
++async def recent_activity(request: Request):
++    username = request.cookies.get("demo_user")
++    if username not in active_sessions:
++        return {"error": "Not authenticated"}
++    return {
++        "items": [
++            {"action": "Signed in", "when": "Just now"},
++            {"action": "Opened dashboard", "when": "Just now"},
++        ]
++    }
++
++
+ @app.post("/logout")
+ async def logout(request: Request):
+     username = request.cookies.get("demo_user")

@@ -1,0 +1,29 @@
+diff --git a/app/templates/dashboard.html b/app/templates/dashboard.html
+index 0000000..1111111 100644
+--- a/app/templates/dashboard.html
++++ b/app/templates/dashboard.html
+@@ -15,6 +15,10 @@
+     <p class="eyebrow">OVERVIEW</p>
+     <h1>Hello, {{ username }}!</h1>
+     <p class="muted">Here is your workspace at a glance.</p>
++    <section class="profile-panel">
++      <div class="profile-avatar">{{ username[0]|upper }}</div>
++      <div><strong>{{ username|title }}</strong><p class="muted">Workspace administrator</p></div>
++    </section>
+     <section class="stats-grid">
+       <article class="stat-card"><span class="stat-label">Active projects</span><strong>08</strong><span class="stat-note">Across your workspace</span></article>
+       <article class="stat-card"><span class="stat-label">Tasks completed</span><strong>24</strong><span class="stat-note">This month</span></article>
+diff --git a/app/static/styles.css b/app/static/styles.css
+index 0000000..1111111 100644
+--- a/app/static/styles.css
++++ b/app/static/styles.css
+@@ -27,6 +27,9 @@ button { padding: 13px 16px; border: 0; border-radius: 10px; cursor: pointer; fo
+ .dashboard { width: min(100% - 48px, 1050px); margin: 58px auto; }
+ .dashboard > .eyebrow { margin-top: 0; }
+ .dashboard h1 { font-size: 38px; }
++.profile-panel { display: flex; align-items: center; gap: 14px; margin-top: 24px; padding: 16px 20px; border: 1px solid #293650; border-radius: 14px; background: #121d32; }
++.profile-panel .muted { margin: 4px 0 0; font-size: 12px; }
++.profile-avatar { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; color: white; font-weight: 800; background: #655fe2; }
+ .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 34px; }
+ .stat-card, .welcome-panel { padding: 24px; border: 1px solid #293650; border-radius: 16px; background: #121d32; }
+ .stat-label, .stat-note { display: block; color: #9ca9c3; font-size: 13px; }

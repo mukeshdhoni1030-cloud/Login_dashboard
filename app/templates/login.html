@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in | Northstar</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body class="auth-page">
+  <main class="login-card">
+    <div class="brand-mark">N</div>
+    <p class="eyebrow">NORTHSTAR WORKSPACE</p>
+    <h1>Welcome back</h1>
+    <p class="muted">Sign in to continue to your dashboard.</p>
+    {% if error %}<div class="alert">{{ error }}</div>{% endif %}
+    <form action="/login" method="post">
+      <label for="username">Username</label>
+      <input id="username" name="username" type="text" placeholder="Enter username" required>
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" placeholder="Enter password" required>
+      <button class="primary-button" type="submit">Sign in</button>
+    </form>
+    <p class="hint">Demo: admin / admin123</p>
+  </main>
+</body>
+</html>
